@@ -18,6 +18,7 @@ public loadingProducts(){
 
   this.http.get('https://portafolioangular2.firebaseio.com/productos_idx.json')
   .subscribe(res=>{
+    console.log(res.json())
     this.products = res.json()
     this.loading = false;
 

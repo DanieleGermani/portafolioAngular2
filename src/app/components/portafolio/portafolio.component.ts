@@ -1,4 +1,5 @@
 import { Component} from '@angular/core';
+import{ProductsService} from '../../service/products.service';
 
 @Component({
   selector: 'app-portafolio',
@@ -7,7 +8,9 @@ import { Component} from '@angular/core';
 })
 export class PortafolioComponent  {
 
-  constructor() { }
+  constructor(
+    private _productS:ProductsService 
+  ) { }
 
 
 }
