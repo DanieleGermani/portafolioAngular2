@@ -25,7 +25,7 @@ public lodindigInfoAbout(){
   this.http.get("https://portafolioangular2.firebaseio.com/team.json")
             .subscribe( data =>{
               this.loadingAbout = true;
-              console.log(data.json())
+              //console.log(data.json())
               this.infoAbout = data.json();
             })
 
