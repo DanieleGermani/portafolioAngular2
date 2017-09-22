@@ -21,8 +21,8 @@ export class PortfolioItemComponent {
             .subscribe(res=>{
               this.cod = params['id'];
               this.product= res.json();
-              console.log(this.product);
-              
+              //console.log(this.product);
+
             })
       })
 
