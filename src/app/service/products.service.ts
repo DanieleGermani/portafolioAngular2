@@ -12,13 +12,20 @@ export class ProductsService {
 
   }
 
+  public loadingItemByID(cod:string){
+
+    return this.http.get(`https://portafolioangular2.firebaseio.com/productos/${cod}.json`)
+    
+
+  }
+
   public loadingProducts() {
 
     this.loadingP = true;
 
     this.http.get('https://portafolioangular2.firebaseio.com/productos_idx.json')
       .subscribe(res => {
-    
+
           this.products = res.json()
           this.loadingP = false;
 
