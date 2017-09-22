@@ -11,7 +11,7 @@ export class PortfolioItemComponent {
   product:any = undefined;
   cod:any= undefined;
 
-  constructor(private route:ActivatedRoute, private _productS:ProductsService) {
+  constructor(public route:ActivatedRoute, public _productS:ProductsService) {
 
 
 

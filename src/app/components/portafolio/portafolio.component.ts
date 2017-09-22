@@ -9,7 +9,7 @@ import{ProductsService} from '../../service/products.service';
 export class PortafolioComponent  {
 
   constructor(
-    private _productS:ProductsService 
+    public _productS:ProductsService 
   ) { }
 
 
