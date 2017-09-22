@@ -1,29 +1,30 @@
 import { Injectable } from '@angular/core';
-import { Http} from '@angular/http';
+import { Http } from '@angular/http';
 
 @Injectable()
 export class ProductsService {
-  products:any[]=[];
-  loading:boolean = true;
+  products: any[] = [];
+  loadingP: boolean = true;
 
 
-  constructor(private http:Http) {
-this.loadingProducts();
+  constructor(private http: Http) {
+    this.loadingProducts();
 
-    }
+  }
 
-public loadingProducts(){
+  public loadingProducts() {
 
-  this.loading = true;
+    this.loadingP = true;
 
-  this.http.get('https://portafolioangular2.firebaseio.com/productos_idx.json')
-  .subscribe(res=>{
-    console.log(res.json())
-    this.products = res.json()
-    this.loading = false;
+    this.http.get('https://portafolioangular2.firebaseio.com/productos_idx.json')
+      .subscribe(res => {
+    
+          this.products = res.json()
+          this.loadingP = false;
 
-  });
-}
+
+      });
+  }
 
 
 

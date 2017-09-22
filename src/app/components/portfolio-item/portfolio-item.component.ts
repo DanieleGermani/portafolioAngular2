@@ -1,4 +1,5 @@
 import { Component} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-portfolio-item',
@@ -7,7 +8,15 @@ import { Component} from '@angular/core';
 })
 export class PortfolioItemComponent {
 
-  constructor() { }
+  constructor(private route:ActivatedRoute) {
+
+      route.params.subscribe(params=>{
+        console.log(params);
+          console.log(params['id'])
+      })
+
+
+   }
 
 
 
