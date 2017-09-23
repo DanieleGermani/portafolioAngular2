@@ -1,5 +1,6 @@
 
   <div class="ae-grid au-xs-ta-center au-mb-4 animated fadeIn">
+
     <div *ngFor="let team of _infoS.infoAbout"
     class="ae-grid__item item-lg-4 ae-kappa au-mb-3">
     <img [src]="team.url" alt="" class="au-mb-3">
@@ -8,6 +9,7 @@
       <p class="au-lg-ta-left au-mb-3 au-pl-4 au-pr-4">{{team.frase}}</p>
       <a href="htttps://twitter.com/{{team.twitter}}" class="ae-u-bolder au-underline"target="_blank">{{team.twitter}}</a>
     </div>
+
 
 
   <div class="ae-grid au-pt-2">
@@ -35,3 +37,4 @@
         <svg>
           <use xlink:href="assets/img/symbols.svg#arrow"></use>
         </svg></span></a></p>
+  </div>
